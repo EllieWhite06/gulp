@@ -2,6 +2,17 @@
 @import 'libs';
 @import '../fonts/fonts';
 
+body {
+	background-color: #101212;
+ 	color: #fff;
+	text-transform: uppercase;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
 a {
 	text-decoration: none;
 	color: inherit;
@@ -19,7 +30,6 @@ li {
 	line-height: 1.45;
 	text-align: right;
 	letter-spacing: 7.33333px;
-	text-transform: uppercase;
 	opacity: 0.5;
 	padding-left: 103px;
 	position: relative;
@@ -49,7 +59,6 @@ li {
 		font-weight: 800;
 		font-size: 20vh;
 		line-height: 15.6vh;
-		text-transform: uppercase;
 		color: #fff;
 		opacity: 0.07;
 		width: 200px;
@@ -74,7 +83,6 @@ li {
 	&__date {
 		font-weight: 800;
 		font-size: 7.2vh;
-		text-transform: uppercase;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -105,7 +113,10 @@ li {
 		right: 0;
 		top: 0;
 		z-index: 9;
-		height: 12.65vh;
+
+		svg {
+			height: 55vh;
+		}
 	}
 
 	&__arrows-down {
@@ -128,7 +139,6 @@ li {
 		font-size: 4vh;
 		line-height: 86px;
 		text-align: right;
-		text-transform: uppercase;
 	}
 
 	&__title {
@@ -136,7 +146,6 @@ li {
 		font-size: 8vh;
 		line-height: 8.6vh;
 		text-align: right;
-		text-transform: uppercase;
 	}
 
 	&__link {
@@ -185,12 +194,12 @@ li {
 		font-weight: 800;
 		font-size: 2.4vh;
 		line-height: 34px;
-		text-transform: uppercase;
 	}
 
 	&__name {
 		font-weight: 300;
 		font-size: 16px;
+		text-transform: capitalize;
 		line-height: 19px;
 		opacity: 0.9;
 	}
@@ -237,5 +246,78 @@ li {
 		height: 31vh;
 	}
 }
+
+.line-animation {
+	stroke-dashoffset: 600;
+	stroke-dasharray: 600;
+	animation: animated 5s infinite 6s;
+}
+
+@keyframes animated {
+	to{
+		stroke-dashoffset: 0;
+	}
+}
+
+.surf {
+	padding: 160px 24px 210px 24px;
+}
+
+.title {
+	span {
+		font-weight: 800;
+		font-size: 200px;
+		line-height: 78%;
+		color: rgba(#fff, 0.02);
+		position: relative;
+		transform: translateX(-50px);
+		display: inline-block;
+	}
+
+	h3 {
+		font-size: 80px;
+		color: #fff;
+		margin: 0;
+		position: absolute;
+		top: 0;
+		right: -20px;
+
+		&::after {
+			content: '';
+			width: 80px;
+			height: 1px;
+			right: 0;
+			top: 30px;
+			background-color: $green;
+			position: absolute
+
+		}
+	}
+}
+
+.container {
+	max-width: 1920px;
+	width: 100%;
+}
+
+.subtitle {
+	&__head {
+		font-weight: 800;
+		font-size: 40px;
+		text-align: right
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @import 'media';
